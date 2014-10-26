@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+// app/console
+
+set_time_limit(0);
+
+require_once __DIR__.'/../vendor/autoload.php';
+require_once __DIR__.'/AppKernel.php';
+
+use Symfony\Bundle\FrameworkBundle\Console\Application;
+use Symfony\Component\Console\Input\ArgvInput;
+
+Dotenv::load(__DIR__ . '/../');
+
+$input = new ArgvInput();
+$kernel = new AppKernel($_SERVER['SYMFONY_ENV'], (bool)$_SERVER['SYMFONY_DEBUG']);
+$application = new Application($kernel);
+$application->run($input);

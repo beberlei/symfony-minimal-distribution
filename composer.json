@@ -1,0 +1,10 @@
+{
+    "require": {
+        "symfony/symfony": "@stable",
+        "symfony/monolog-bundle": "@stable",
+        "vlucas/phpdotenv": "@stable"
+    },
+    "autoload": {
+        "psr-0": { "Acme": "src/" }
+    }
+}
