@@ -9,8 +9,10 @@ require_once __DIR__.'/AppKernel.php';
 
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Console\Input\ArgvInput;
+use Dotenv\Dotenv;
 
-Dotenv::load(__DIR__ . '/../');
+$dotenv = new Dotenv(__DIR__ . '/../');
+$dotenv->load();
 
 $input = new ArgvInput();
 $kernel = new AppKernel($_SERVER['SYMFONY_ENV'], (bool)$_SERVER['SYMFONY_DEBUG']);

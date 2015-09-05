@@ -2,7 +2,7 @@
     "require": {
         "symfony/symfony": "@stable",
         "symfony/monolog-bundle": "@stable",
-        "vlucas/phpdotenv": "@stable"
+        "vlucas/phpdotenv": "~2.0"
     },
     "autoload": {
         "psr-0": { "Acme": "src/" }
